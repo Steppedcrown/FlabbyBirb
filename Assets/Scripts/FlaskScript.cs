@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class FlaskScript : MonoBehaviour
 {
     public Text aiResponseText;
+    public InputField userInputField;
     void Start()
     {
         StartCoroutine(SendRequest());
@@ -15,6 +16,11 @@ public class FlaskScript : MonoBehaviour
     IEnumerator SendRequest()
     {
         string userPrompt = UnityWebRequest.EscapeURL("What's 1 + 2?");
+        if (!string.IsNullOrEmpty(userPrompt))
+        {
+            userPrompt = userInputField.text;
+            Debug.Log("User Prompt: " + userPrompt);
+        }
         string url = $"http://127.0.0.1:5000/ask?prompt={userPrompt}";
 
         Debug.Log("Request URL: " + url);
