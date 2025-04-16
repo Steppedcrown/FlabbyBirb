@@ -15,15 +15,15 @@ public class FlaskScript : MonoBehaviour
 
     IEnumerator SendRequest()
     {
-        string userPrompt = UnityWebRequest.EscapeURL("What's 1 + 2?");
-        if (!string.IsNullOrEmpty(userPrompt))
+        string userPrompt = userInputField.text;
+        if (string.IsNullOrEmpty(userPrompt))
         {
-            userPrompt = userInputField.text;
-            Debug.Log("User Prompt: " + userPrompt);
+            userPrompt = UnityWebRequest.EscapeURL("What's 1 + 2?");
         }
-        string url = $"http://127.0.0.1:5000/ask?prompt={userPrompt}";
+        Debug.Log("User Prompt: " + userPrompt);
 
-        Debug.Log("Request URL: " + url);
+        string url = $"http://127.0.0.1:5000/ask?prompt={userPrompt}";
+        //Debug.Log("Request URL: " + url);
 
         UnityWebRequest request = UnityWebRequest.Get(url);
 
@@ -38,6 +38,14 @@ public class FlaskScript : MonoBehaviour
         {
             Debug.LogError("Error: " + request.error);
             aiResponseText.text = "Error: " + request.error;
+        }
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            StartCoroutine(SendRequest());
         }
     }
 }
