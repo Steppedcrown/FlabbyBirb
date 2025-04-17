@@ -10,7 +10,7 @@ public class LogicScript : MonoBehaviour
 
     void Start()
     {
-        highScoreText.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
+        highScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScore", 0).ToString();
     }
 
     [ContextMenu("Increase Score")]
@@ -31,7 +31,7 @@ public class LogicScript : MonoBehaviour
         if (playerScore > PlayerPrefs.GetInt("HighScore", 0))
         {
             PlayerPrefs.SetInt("HighScore", playerScore);
-            highScoreText.text = playerScore.ToString();
+            highScoreText.text = "High Score: " + playerScore.ToString();
         }
     }
 }

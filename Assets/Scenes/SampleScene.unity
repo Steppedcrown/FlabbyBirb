@@ -119,51 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &34858932
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 34858934}
-  - component: {fileID: 34858933}
-  m_Layer: 0
-  m_Name: SaveSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &34858933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34858932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69610e578ab9342b5a16768171f62452, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  logic: {fileID: 0}
---- !u!4 &34858934
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34858932}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 860.73553, y: 539.24744, z: -6.953223}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &312469626
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pipe: {fileID: 1702514226048884340, guid: 961b4955fa2354bd0ac2915d0297afbd, type: 3}
-  spawnRate: 2
+  spawnRate: 2.5
   heightOffset: 10
 --- !u!4 &318704312
 Transform:
@@ -363,7 +318,7 @@ Transform:
   m_GameObject: {fileID: 318704310}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.83, y: -0.06, z: -0.08690374}
+  m_LocalPosition: {x: 35, y: 0, z: -0.08690374}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -403,8 +358,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 475, y: 229}
-  m_SizeDelta: {x: 910, y: 540}
+  m_AnchoredPosition: {x: 480.0593, y: -5.4167}
+  m_SizeDelta: {x: 899.8813, y: 1008.8335}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &430363302
 MonoBehaviour:
@@ -439,7 +394,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This should be displaying an API response
+  m_Text: 'Enter text in the text box below to generate a response.
+
+'
 --- !u!222 &430363303
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -554,7 +511,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 9
+  orthographic size: 15
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -644,7 +601,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 100
+    m_FontSize: 50
     m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 1
@@ -1205,7 +1162,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1230,7 +1187,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidbody: {fileID: 1094662643}
-  flapStength: 10
+  flapStength: 15
+  deadZone: -25
   logic: {fileID: 0}
   birdIsAlive: 1
 --- !u!58 &1094662645
@@ -1267,8 +1225,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.1, y: -0.5}
-  m_Radius: 2.01
+  m_Offset: {x: -0.1, y: -0.46}
+  m_Radius: 1.63
 --- !u!1 &1283046079
 GameObject:
   m_ObjectHideFlags: 0
@@ -1762,4 +1720,3 @@ SceneRoots:
   - {fileID: 312469629}
   - {fileID: 817667942}
   - {fileID: 1991337742}
-  - {fileID: 34858934}

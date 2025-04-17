@@ -3,7 +3,8 @@ using UnityEngine;
 public class BirdScript : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
-    public float flapStength = 10;
+    public float flapStength;
+    public float deadZone;
     public LogicScript logic;
     public bool birdIsAlive = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,7 +16,7 @@ public class BirdScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.transform.position.y < -25)
+        if (gameObject.transform.position.y < deadZone)
         {
             logic.GameOver();
             birdIsAlive = false;
