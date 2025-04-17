@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class FlaskScript : MonoBehaviour
 {
     public Text aiResponseText;
+    public Text defaultText;
     public InputField userInputField;
     void Start()
     {
@@ -31,8 +32,8 @@ public class FlaskScript : MonoBehaviour
 
         if (request.result == UnityWebRequest.Result.Success)
         {
-            Debug.Log("AI Response: " + request.downloadHandler.text);
             aiResponseText.text = request.downloadHandler.text;
+            Debug.Log("AI Response: " + aiResponseText.text);
         }
         else
         {
@@ -46,6 +47,7 @@ public class FlaskScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             StartCoroutine(SendRequest());
+            userInputField.text = defaultText.text;
         }
     }
 }
