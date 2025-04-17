@@ -11,7 +11,7 @@ public class FlaskScript : MonoBehaviour
     public InputField userInputField;
     void Start()
     {
-        StartCoroutine(SendRequest());
+        //StartCoroutine(SendRequest());
     }
 
     IEnumerator SendRequest()

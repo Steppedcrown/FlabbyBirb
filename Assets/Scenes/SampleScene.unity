@@ -358,8 +358,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 475, y: 229}
-  m_SizeDelta: {x: 910, y: 540}
+  m_AnchoredPosition: {x: 480.0593, y: -5.4167}
+  m_SizeDelta: {x: 899.8813, y: 1008.8335}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &430363302
 MonoBehaviour:
@@ -394,7 +394,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This should be displaying an API response
+  m_Text: 'Enter text in the text box below to generate a response.
+
+'
 --- !u!222 &430363303
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -599,7 +601,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 100
+    m_FontSize: 50
     m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 1
@@ -1186,6 +1188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRigidbody: {fileID: 1094662643}
   flapStength: 15
+  deadZone: -25
   logic: {fileID: 0}
   birdIsAlive: 1
 --- !u!58 &1094662645
