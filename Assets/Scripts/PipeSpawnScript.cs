@@ -3,8 +3,8 @@ using UnityEngine;
 public class PipeSpawnScript : MonoBehaviour
 {
     public GameObject pipe;
-    public float spawnRate = 2;
-    public float heightOffset = 10;
+    public float spawnRate; // seconds
+    public float heightOffset = 8;
     private float timer = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

@@ -3,7 +3,7 @@ using UnityEngine;
 public class BirdScript : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
-    public float flapStength = 10;
+    public float flapStength;
     public LogicScript logic;
     public bool birdIsAlive = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
