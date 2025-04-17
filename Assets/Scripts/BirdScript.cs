@@ -17,7 +17,7 @@ public class BirdScript : MonoBehaviour
     {
         if (gameObject.transform.position.y < -25)
         {
-            logic.gameOver();
+            logic.GameOver();
             birdIsAlive = false;
         }
         if (Input.GetKeyDown(KeyCode.Space) && birdIsAlive)
@@ -28,7 +28,7 @@ public class BirdScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        logic.gameOver();
+        logic.GameOver();
         birdIsAlive = false;
     }
 }
